@@ -1,0 +1,18 @@
+{
+  "name": "paint-militia",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Jetpack paint-blaster party game for 2-8 players, running on Netlify Functions + Netlify Blobs",
+  "scripts": {
+    "build": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^10.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

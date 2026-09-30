@@ -1,0 +1,18 @@
+# Paint Militia — Netlify configuration.
+# The static game lives in /public; the multiplayer referee is a standard Netlify Function
+# (netlify/functions/game.ts) served at /.netlify/functions/game and backed by Netlify Blobs.
+
+[build]
+  command = "npm run build"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
